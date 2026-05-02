@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+
+{% block title %}Home | Antuan Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- Projects Section-->
+<section class="py-5">
+  <div class="container px-5 mb-5">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bolder mb-0">
+        <span class="text-gradient d-inline">Projects</span>
+      </h1>
+    </div>
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-11 col-xl-9 col-xxl-8">
+        <!-- Project Card 1-->
+        <a
+          href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Multivariable_Regression_and_Valuation_Model_.ipynb"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+            <div class="card-body p-0">
+              <div class="d-flex align-items-center">
+                <div class="p-5">
+                  <h2 class="fw-bolder">
+                    Multivariable Regression & Valuation Model
+                  </h2>
+                  <p>
+                    I am tasked with building a model that can provide a price
+                    estimate based on a home's characteristics like:
+                  </p>
+
+                  <ul>
+                    <li>The number of rooms</li>
+                    <li>The distance to employment centres</li>
+                    <li>How wealthy or deprived the area is</li>
+                    <li>The student-to-teacher ratio in local schools</li>
+                  </ul>
+                  <div class="mt-2">
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-secondary">Pandas</span>
+                    <span class="badge bg-success">Scikit-learn</span>
+                    <span class="badge bg-info">NumPy</span>
+                    <span class="badge bg-dark">Seaborn</span>
+                  </div>
+                  <a
+                    href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Multivariable_Regression_and_Valuation_Model_.ipynb"
+                    target="_blank"
+                    class="btn btn-dark mt-3"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+                <!-- IMAGE -->
+                <div class="p-4">
+                  <img
+                    class="img-fluid rounded"
+                    style="width: 400px"
+                    src="{{ url_for('static', filename='assets/model_img.png') }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Project Card 2-->
+        <a
+          href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Google_Play_Store_App_Analytics_.ipynb"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+            <div class="card-body p-0">
+              <div class="d-flex align-items-center">
+                <div class="p-5">
+                  <h2 class="fw-bolder">Google Play Store App Analytics</h2>
+                  <p>
+                    In this project, I compare thousands of apps in Google Play
+                    Store to gain insights into:
+                  </p>
+
+                  <ul>
+                    <li>
+                      How competitive different app categories (e.g., Games,
+                      Lifestyle, Weather) are
+                    </li>
+                    <li>
+                      Which app category offers compelling opportunities based
+                      on its popularity
+                    </li>
+                    <li>
+                      How many downloads you would give up by making your app
+                      paid vs. free
+                    </li>
+                    <li>How much you can reasonably charge for a paid app</li>
+                    <li>
+                      How many paid apps will regain their development costs
+                      based on their sales revenue
+                    </li>
+                  </ul>
+                  <div class="mt-2">
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-secondary">Pandas</span>
+                    <span class="badge bg-success">Matplotlib</span>
+                  </div>
+                  <a
+                    href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Google_Play_Store_App_Analytics_.ipynb"
+                    target="_blank"
+                    class="btn btn-dark mt-3"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+                <!-- IMAGE -->
+                <div class="p-4">
+                  <img
+                    class="img-fluid rounded"
+                    style="width: 400px"
+                    src="{{ url_for('static', filename='assets/google_play.png') }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Project Card 3-->
+        <a
+          href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Dr_Semmelweis_Handwashing_Discovery.ipynb"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+            <div class="card-body p-0">
+              <div class="d-flex align-items-center">
+                <div class="p-5">
+                  <h2 class="fw-bolder">The Tragic Discovery of Handwashing</h2>
+                  <p>What if a simple habit could save thousands of lives?</p>
+
+                  <ul>
+                    <li>
+                      Inspired by Dr. Ignaz Semmelweis, a 19th-century physician
+                      in Vienna
+                    </li>
+                    <li>
+                      Investigated why maternal deaths were significantly higher
+                      in one hospital ward
+                    </li>
+                    <li>
+                      Used data analysis to uncover a hidden cause: poor hygiene
+                      practices
+                    </li>
+                    <li>
+                      Demonstrated that handwashing dramatically reduced death
+                      rates
+                    </li>
+                  </ul>
+                  <div class="mt-2">
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-secondary">Statistical Analysis</span>
+                    <span class="badge bg-success">Hypothesis Testing</span>
+                    <span class="badge bg-info">KDE</span>
+                    <span class="badge bg-dark">Data Visualization</span>
+                  </div>
+                  <a
+                    href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Dr_Semmelweis_Handwashing_Discovery.ipynb"
+                    target="_blank"
+                    class="btn btn-dark mt-3"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+                <!-- IMAGE -->
+                <div class="p-4">
+                  <img
+                    class="img-fluid rounded"
+                    style="width: 400px"
+                    src="{{ url_for('static', filename='assets/handwashing.png') }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Project Card 4-->
+        <a
+          href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Covid%20Portfolio%20Project%20with%20PostgreSQL.sql"
+          target="_blank"
+          style="text-decoration: none; color: inherit"
+        >
+          <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+            <div class="card-body p-0">
+              <div class="d-flex align-items-center">
+                <div class="p-5">
+                  <h2 class="fw-bolder">
+                    Covid 19 Data Exploration & Analysis
+                  </h2>
+                  <p>
+                    Analyzed global COVID-19 data using SQL to uncover trends in
+                    infection rates, mortality, and vaccination progress.
+                  </p>
+
+                  <ul>
+                    <li>
+                      Calculated infection and death rates across countries and
+                      continents
+                    </li>
+                    <li>
+                      Compared COVID-19 impact relative to population size
+                    </li>
+                    <li>
+                      Identified countries with highest infection and mortality
+                      rates
+                    </li>
+                    <li>
+                      Analyzed global trends using aggregate and window
+                      functions
+                    </li>
+                    <li>
+                      Tracked vaccination progress using rolling calculations
+                    </li>
+                  </ul>
+                  <div class="mt-2">
+                    <span class="badge bg-primary">SQL</span>
+                    <span class="badge bg-secondary">PostgreSQL</span>
+                    <span class="badge bg-info">Data Analysis</span>
+                    <span class="badge bg-success">Window Functions</span>
+                    <span class="badge bg-dark">Joins & CTEs</span>
+                  </div>
+                  <a
+                    href="https://github.com/AntuanTheAnalyst/PortfolioProjects/blob/main/Covid%20Portfolio%20Project%20with%20PostgreSQL.sql"
+                    target="_blank"
+                    class="btn btn-dark mt-3"
+                  >
+                    View on GitHub
+                  </a>
+                </div>
+                <!-- IMAGE -->
+                <div class="p-4">
+                  <img
+                    class="img-fluid rounded"
+                    style="width: 400px"
+                    src="{{ url_for('static', filename='assets/covid19.jpg') }}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call to action section-->
+<section class="py-5 bg-gradient-primary-to-secondary text-white">
+  <div class="container px-5 my-5">
+    <div class="text-center">
+      <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+      <a
+        class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
+        href="{{ url_for('contact') }}"
+        >Contact me
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
