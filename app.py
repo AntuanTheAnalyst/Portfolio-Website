@@ -1,7 +1,8 @@
 from flask import Flask, request, redirect, render_template, flash, url_for
-from flask_mail import Mail, Message
 import os
 from dotenv import load_dotenv
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 load_dotenv() 
 
@@ -25,46 +26,41 @@ def projects():
 def contact():
     return render_template("contact.html")
 
-# 🔐 Email config (Gmail example)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv("EMAIL_USER")
-app.config['MAIL_PASSWORD'] = os.getenv("EMAIL_PASS")
-app.config['MAIL_DEFAULT_SENDER'] = os.getenv("EMAIL_USER")
 
-mail = Mail(app)
 
 @app.route('/send', methods=['POST'])
 def send_email():
     name = request.form.get('name')
     email = request.form.get('email')
-    phone = request.form.get('phone')
     message = request.form.get('message')
 
-    msg = Message(
-        subject=f"📩 Portfolio Contact: {name}",
-        sender=app.config['MAIL_USERNAME'],
-        recipients=[app.config['MAIL_USERNAME']],
-        body=f"""
-Name: {name}
-Email: {email}
-Phone: {phone}
+    content = f"""
+    New message from your portfolio:
 
-Message:
-{message}
-"""
-    )
+    Name: {name}
+    Email: {email}
 
-    mail.send(msg)
-    flash("Your message has been sent successfully! 🎉", "success")
-    return redirect("/")  # redirect back to homepage
+    Message:
+    {message}
+    """
+
+    try:
+        sg = SendGridAPIClient(os.getenv("SENDGRID_API_KEY"))
+
+        mail = Mail(
+            from_email=os.getenv("EMAIL_USER"),  # your email
+            to_emails=os.getenv("EMAIL_USER"),
+            subject=f"Portfolio Message from {name}",
+            plain_text_content=content
+        )
+
+        sg.send(mail)
+
+        return redirect(url_for("contact", success=1))
+
+    except Exception as e:
+        print("SENDGRID ERROR:", e)
+        return redirect(url_for("contact", error=1))
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
